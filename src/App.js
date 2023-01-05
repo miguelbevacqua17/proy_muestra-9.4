@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import Nombre from './components/Nombre';
+import Color from './components/Color';
+import { Link, Route, Switch } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -17,7 +21,20 @@ function App() {
         >
           Learn React
         </a>
+
+        
+      <Link to="/color" exact={true}>  Color  </Link>  
+      <Link to="/nombre" exact={true}> Nombre </Link>  
+
+      <Switch>
+        <Route path="/color" exact={true} component={Color}>
+            
+        </Route>
+      </Switch>
       </header>
+
+
+      
     </div>
   );
 }
